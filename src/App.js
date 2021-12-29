@@ -1,19 +1,14 @@
-import './App.css';
-import HomeScreen from './screens/HomeScreen';
-import LoginScreen from './screens/LoginScreen';
-import ProfileScreen from './screens/ProfileScreen'
-import NavbarComponent from './components/NavbarComponent';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import FooterComponent from './components/FooterComponent';
+import "./App.css";
+import HomeScreen from "./screens/Home/HomeScreen";
+import LoginScreen from "./screens/Login/LoginScreen";
+import ProfileScreen from "./screens/Profile/ProfileScreen";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
-  <div>
-    <Router>
-          <NavbarComponent/>
+    <div>
+      <Router>
+        <Navbar />
 
         <Switch>
           <Route exact path="/">
@@ -25,15 +20,13 @@ function App() {
           <Route exact path="/profile">
             <ProfileScreen />
           </Route>
-          
+          <Route exact path="*">
+            <HomeScreen />
+          </Route>
         </Switch>
-      
-    </Router> 
-    <FooterComponent/>
- 
-  </div> );
+      </Router>
+    </div>
+  );
 }
- 
-
 
 export default App;

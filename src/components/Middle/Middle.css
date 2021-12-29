@@ -1,0 +1,13 @@
+.Middle {
+  flex: 7;
+}
+.App {
+  font-family: sans-serif;
+  background-color: #e3e6e4;
+}
+.home-card {
+  max-width: 500px;
+  height: max-content;
+  margin: 26px auto;
+  padding-bottom: 15px;
+}
